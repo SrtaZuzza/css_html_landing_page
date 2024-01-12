@@ -1,0 +1,69 @@
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Montserrat;
+}
+
+section {
+    width: 100%;
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#title {
+    outline: 1px solid red;
+}
+
+#title p {
+    width: 50%;
+}
+
+#presentation {
+    outline: 1px solid green;
+}
+
+#presentation li {
+    list-style: none;
+}
+
+#image {
+    outline: 1px solid pink;
+}
+
+.image {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.image img {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+.image h3 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+#cta {
+    outline: 1px solid blue;
+}
+
+#cta p {
+    width: 60%;
+    font-size: 14px;
+}
+
+#footer {
+    outline: 1px solid yellow;
+}
+
