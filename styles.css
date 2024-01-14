@@ -1,12 +1,33 @@
 :root {
     --blue: #1e90ff;
     --white: #ffffff;
+
+/*
+hotpink
+springgreen
+cyan
+darkorange
+yellow
+*/
+
+    box-sizing: inherit;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
-body, html {
+html {
+    min-height: 100%;
+    background: #191970;
+    color: white;
+}
+
+body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100%;
     font-family: Montserrat;
 }
 
@@ -19,16 +40,24 @@ section {
     text-align: center;
 }
 
-#title {
-    outline: 1px solid red;
-}
-
 #title p {
     width: 50%;
 }
 
+#title button {
+    padding: 12px 18px;
+    border-radius: 40px;
+    background: white;
+    border: none;
+    font-family: Montserrat;
+    font-weight: 600;
+    margin-top: 16px;
+}
+
 #presentation {
-    outline: 1px solid green;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 #presentation li {
@@ -36,26 +65,38 @@ section {
 }
 
 #image {
-    outline: 1px solid pink;
+    padding: 0;
 }
 
 .image {
     display: grid;
     grid-template-columns: 1fr;
+    align-items: end;
+    justify-items: center;
 }
 
 .image img {
+    width: 100%;
+    object-fit: cover;
     grid-row-start: 1;
     grid-column-start: 1;
 }
 
 .image h3 {
-    grid-row-start: 1;
-    grid-column-start: 1;
+    text-decoration: none;
 }
 
-#cta {
-    outline: 1px solid blue;
+.card {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    
+    width: 50%;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, .45);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
+    backdrop-filter: blur(15px);
 }
 
 #cta p {
@@ -63,7 +104,9 @@ section {
     font-size: 14px;
 }
 
-#footer {
-    outline: 1px solid yellow;
+#footer a {
+    color: deepskyblue;
+    text-decoration: none;
+    font-weight: 600;
 }
 
