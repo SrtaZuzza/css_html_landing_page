@@ -1,6 +1,6 @@
 :root {
-    --blue: #1e90ff;
-    --white: #ffffff;
+    --back: #31345b;
+    --lilac: #7c70b5;
 
 /*
 hotpink
@@ -12,6 +12,7 @@ yellow
 
     box-sizing: inherit;
 }
+
 *,
 *:before,
 *:after {
@@ -20,7 +21,7 @@ yellow
 
 html {
     min-height: 100%;
-    background: #191970;
+    background: var(--back);
     color: white;
 }
 
@@ -44,14 +45,21 @@ section {
     width: 50%;
 }
 
+@media only screen and (max-width: 768px) {
+    #title p {
+        width: 70%;
+    }
+  }
+
 #title button {
     padding: 12px 18px;
     border-radius: 40px;
-    background: white;
+    background: var(--lilac);
     border: none;
     font-family: Montserrat;
     font-weight: 600;
     margin-top: 16px;
+    color: white;
 }
 
 #presentation {
@@ -60,38 +68,64 @@ section {
     justify-content: center;
 }
 
+#presentation>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#presentation>div h2 {
+    width: 80%;
+}
+
+#presentation ul {
+    padding: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    #presentation {
+        flex-direction: column;
+    }
+  }
+
 #presentation li {
     list-style: none;
 }
 
 #image {
+    width: 100%;
     padding: 0;
 }
 
-.image {
+#image {
     display: grid;
     grid-template-columns: 1fr;
     align-items: end;
     justify-items: center;
 }
 
-.image img {
+#image img {
     width: 100%;
     object-fit: cover;
     grid-row-start: 1;
     grid-column-start: 1;
+    filter: saturate(70%);
 }
 
-.image h3 {
+#image h3 {
     text-decoration: none;
 }
 
-.card {
+.card, .screen {
     grid-row-start: 1;
     grid-column-start: 1;
+
+    display: flex;
+    justify-content: center;
     
     width: 50%;
-    margin-bottom: 16px;
+    padding: 0 32px;
+    margin-bottom: 32px;
     background-color: rgba(255, 255, 255, .45);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, .25);
@@ -99,13 +133,52 @@ section {
     backdrop-filter: blur(15px);
 }
 
-#cta p {
-    width: 60%;
-    font-size: 14px;
+.card h3, .screen h2 {
+    color: var(--back);
+}
+
+.screen {
+    width: 20%;
+    margin-bottom: 18%;
+}
+
+#people {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: end;
+    justify-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+    #people {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .screen {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+  }
+
+#people h2 {
+    width: 90%;
+    font-size: 32px;
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+#people img {
+    width: 100%;
+    height: auto;
+    grid-row-start: 1;
+    grid-column-start: 1;
 }
 
 #footer a {
-    color: deepskyblue;
+    color: #db845f;
     text-decoration: none;
     font-weight: 600;
 }
